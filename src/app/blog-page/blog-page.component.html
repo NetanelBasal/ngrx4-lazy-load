@@ -1,0 +1,8 @@
+<h1>Blog page</h1>
+
+<ul>
+  <li *ngFor="let post of (posts$ | async).data">{{ post }}</li>
+</ul>
+
+<input type="text" placeholder="New post" #input> 
+<button (click)="store.dispatch({type: '[Post] Add', payload: input.value}); input.value = ''">Add</button>

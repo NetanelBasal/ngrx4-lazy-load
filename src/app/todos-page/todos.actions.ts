@@ -1,0 +1,13 @@
+import {
+  Action
+} from '@ngrx/store';
+
+export const ADD = '[Todos] Add';
+
+export class AddAction implements Action {
+  readonly type = ADD;
+
+  constructor(public payload: string) {}
+}
+
+export type Actions = AddAction

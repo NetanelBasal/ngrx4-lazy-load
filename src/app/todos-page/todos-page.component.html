@@ -1,0 +1,8 @@
+<h1>Todos page</h1>
+
+<ul>
+  <li *ngFor="let todo of (todos$ | async).data">{{ todo }}</li>
+</ul>
+
+<input type="text" placeholder="New todo" #input> 
+<button (click)="store.dispatch({type: '[Todos] Add', payload: input.value}); input.value = ''">Add</button>
